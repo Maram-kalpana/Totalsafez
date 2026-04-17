@@ -17,11 +17,11 @@ export default function Hero() {
           </p>
 
           <Link
-            href="/products"
-            className="mt-6 inline-block rounded-md bg-white px-8 py-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#111] transition-all duration-300 hover:bg-[#111] hover:text-white"
-          >
-            ALL PRODUCTS
-          </Link>
+  href="/products"
+  className="mt-6 w-fit inline-flex items-center rounded-md bg-white px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-[#111] transition-all duration-300 hover:bg-[#111] hover:text-white"
+>
+  ALL PRODUCTS
+</Link>
         </div>
 
         {/* RIGHT IMAGE */}

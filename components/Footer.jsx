@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
           <div>
-            <h5 className="text-lg font-semibold tracking-[0.26em] text-ink">GARGET</h5>
+            <h5 className="text-lg font-semibold tracking-[0.26em] text-ink">TotalSafez</h5>
             <p className="mt-4 max-w-xs text-sm leading-7 text-muted">
               Premium plants and lifestyle accents crafted to bring tranquility and natural beauty
               into your everyday spaces.
