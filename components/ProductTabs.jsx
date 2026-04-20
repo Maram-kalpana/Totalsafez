@@ -2,6 +2,7 @@
 
 import { productTabs } from '@/data/products';
 
+
 export default function ProductTabs({ activeTab, onTabChange }) {
   return (
     <section className="pb-8 pt-2">
