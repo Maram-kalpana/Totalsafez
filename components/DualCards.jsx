@@ -13,12 +13,12 @@
   ];
 
   return (
-    <section className="pb-20">
-      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+    <section className="m-0 p-0">
+      <div className="flex w-full">
         {cards.map((card) => (
           <article
             key={card.title}
-            className="relative h-[320px] overflow-hidden"
+            className="relative flex-1 h-[320px] overflow-hidden"
             style={{
               backgroundImage: `url(${card.image})`,
               backgroundSize: 'cover',
@@ -28,7 +28,7 @@
             <div className="absolute inset-0 bg-black/30 p-8 text-white">
               <div className="flex h-full flex-col justify-end">
                 <h4 className="max-w-xs text-2xl font-semibold leading-snug">{card.title}</h4>
-                <button className="mt-6 w-fit border border-white px-7 py-2 text-xs font-medium uppercase tracking-wider transition-colors duration-300 hover:bg-white hover:text-ink">
+                <button className="mt-6 w-fit border border-white px-7 py-2 text-xs font-medium uppercase tracking-wider transition-colors duration-300 hover:bg-white hover:text-black">
                   Discover
                 </button>
               </div>

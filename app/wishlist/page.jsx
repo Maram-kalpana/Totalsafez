@@ -39,12 +39,19 @@ export default function WishlistPage() {
                   <h3 className="mt-2 text-[13px] font-medium">{item.name}</h3>
                   <p className="text-[12px] text-[#5f9d35]">{item.price}</p>
                 </Link>
-                <button onClick={() => addToCart(item, 1)} className="mt-2 w-full bg-black py-2 text-[11px] uppercase tracking-wider text-white">
-                  Add to cart
-                </button>
-                <button onClick={() => toggleWishlist(item)} className="mt-2 w-full border py-2 text-[11px] uppercase tracking-wider">
-                  Remove
-                </button>
+                <button
+  onClick={() => addToCart(item, 1)}
+  className="mt-2 w-full bg-[#1700de] py-2 text-[11px] uppercase tracking-wider text-white hover:opacity-90"
+>
+  Add to cart
+</button>
+
+<button
+  onClick={() => toggleWishlist(item)}
+  className="mt-2 w-full border border-[#1700de] py-2 text-[11px] uppercase tracking-wider text-[#1700de] hover:bg-[#1700de] hover:text-white"
+>
+  Remove
+</button>
               </article>
             ))}
           </div>

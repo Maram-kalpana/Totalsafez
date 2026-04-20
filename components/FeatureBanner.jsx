@@ -1,50 +1,57 @@
 ﻿import Link from "next/link";
 
 export default function FeatureBanner() {
+  const cards = [
+    {
+      src: "/reference/pro1.jpeg",
+      alt: "Pet Care",
+      label: "Pet Care",
+    },
+    {
+      src: "/reference/pro2.jpeg",
+      alt: "Healthcare",
+      label: "Healthcare",
+    },
+    {
+      src: "/reference/pro3.jpeg",
+      alt: "Agriculture",
+      label: "Agriculture",
+    },
+    {
+      src: "/reference/pro4.jpeg",
+      alt: "Environment",
+      label: "Environment",
+    },
+  ];
+
   return (
-    <section className="bg-[#f3f3f3] py-20">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-3">
-
-        {/* LEFT IMAGE */}
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
-            alt="plant"
-            className="h-[420px] w-full object-cover"
-          />
-        </div>
-
-        {/* CENTER TEXT */}
-        <div className="text-center">
-          <p className="mb-3 text-xs tracking-[0.3em] text-gray-500">
-            LUSH LIVING
-          </p>
-
-          <h2 className="text-[42px] font-semibold text-[#111] leading-tight">
-            Plants for Every Space
-          </h2>
-
-          <p className="mt-4 text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quos animi in nobis beatae harum?
-          </p>
-
+    <section className="bg-white">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-[10px] bg-white">
+        {cards.map((card) => (
           <Link
             href="/products"
-            className="mt-6 inline-block rounded bg-black px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white hover:bg-gray-800"
+            key={card.alt}
+            className="group block overflow-hidden bg-white"
           >
-            ALL PRODUCTS
+
+            {/* LABEL */}
+            <div className="py-3 text-center">
+              <span className="text-[13px] font-medium text-[#222] tracking-wide">
+                {card.label}
+              </span>
+            </div>
+
+            {/* IMAGE */}
+            <div className="overflow-hidden">
+              <img
+                src={card.src}
+                alt={card.alt}
+                className="w-full h-[380px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
           </Link>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"
-            alt="plant"
-            className="h-[420px] w-full object-cover"
-          />
-        </div>
-
+        ))}
       </div>
     </section>
   );

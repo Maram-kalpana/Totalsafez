@@ -112,7 +112,7 @@ export default function LoginPage() {
       <Header />
 
       <section className="mx-auto max-w-xl px-4 py-12">
-        <h1 className="text-3xl font-semibold">Log In / Sign In</h1>
+        {/* <h1 className="text-3xl font-semibold">Log In / Sign In</h1> */}
         <p className="mt-2 text-sm text-[#666]">
           New users will be automatically signed up. Returning users can log in
           with email/phone + password.
@@ -214,13 +214,16 @@ export default function LoginPage() {
           </div>
 
           {/* BUTTON */}
-          <button
-            type="submit"
-            disabled={busy}
-            className="w-full bg-black px-4 py-3 text-xs font-semibold uppercase tracking-wider text-white disabled:opacity-60"
-          >
-            {busy ? "Please wait..." : isLogin ? "LOGIN" : "CONTINUE"}
-          </button>
+          <div className="flex justify-center">
+  <button
+    type="submit"
+    disabled={busy}
+    className="w-fit px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white rounded-md disabled:opacity-60"
+    style={{ backgroundColor: "#1700de" }}
+  >
+    {busy ? "Please wait..." : isLogin ? "LOGIN" : "CONTINUE"}
+  </button>
+</div>
 
           {/* OR */}
           <div className="relative pt-2">
@@ -233,31 +236,34 @@ export default function LoginPage() {
           </div>
 
           {/* GOOGLE LOGIN */}
-          <button
-            type="button"
-            onClick={async () => {
-              setError("");
-              setBusy(true);
+          <div className="flex justify-center">
+  <button
+    type="button"
+    onClick={async () => {
+      setError("");
+      setBusy(true);
 
-              try {
-                const result = loginWithGoogle();
+      try {
+        const result = loginWithGoogle();
 
-                if (!result.success) {
-                  setError(result.message);
-                  return;
-                }
+        if (!result.success) {
+          setError(result.message);
+          return;
+        }
 
-                window.dispatchEvent(new Event("garget:update"));
-                router.push("/profile");
-              } finally {
-                setBusy(false);
-              }
-            }}
-            disabled={busy}
-            className="w-full border border-[#111] px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#111] hover:bg-[#111] hover:text-white disabled:opacity-60"
-          >
-            Continue with Google
-          </button>
+        window.dispatchEvent(new Event("garget:update"));
+        router.push("/profile");
+      } finally {
+        setBusy(false);
+      }
+    }}
+    disabled={busy}
+    className="w-fit px-6 py-3 text-xs font-semibold uppercase tracking-wider text-white rounded-md disabled:opacity-60"
+    style={{ backgroundColor: "#1700de" }}
+  >
+    Continue with Google
+  </button>
+</div>
         </form>
       </section>
 
