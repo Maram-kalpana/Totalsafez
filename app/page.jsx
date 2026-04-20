@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import FeatureBanner from '@/components/FeatureBanner';
 // import LifestyleSection from '@/components/LifestyleSection';
 import PromoBanner from '@/components/PromoBanner';
-import DualCards from '@/components/DualCards';
+// import DualCards from '@/components/DualCards';
 import Footer from '@/components/Footer';
 import HomeCatalog from '@/components/shop/HomeCatalog';
 
@@ -16,7 +16,7 @@ export default function Home() {
       {/* <LifestyleSection /> */}
       <HomeCatalog />
       <PromoBanner /> 
-       <DualCards />
+        {/* <DualCards /> */}
       <Footer />
     </main>
   );
