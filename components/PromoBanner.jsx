@@ -7,31 +7,30 @@ export default function PromoSection() {
       {/* 🔥 FULL WIDTH BANNER */}
       <div className="relative h-[420px] w-full overflow-hidden mb-10">
         <img
-          src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=1800&q=80"
-          alt="banner"
-          className="w-full h-full object-cover"
-        />
-
-        {/* Overlay */}
+  src="/reference/waterbanner.jpeg"
+  alt="banner"
+  className="w-full h-full object-cover object-left"
+/>
+        {/* Overlay}
         <div className="absolute inset-0 bg-black/30" />
 
         {/* Content */}
-        <div className="absolute left-12 bottom-16 text-white max-w-lg">
+        {/* <div className="absolute left-12 bottom-16 text-white max-w-lg">
           <p className="text-xs uppercase tracking-[0.24em]">
             Natural Collection
           </p>
 
           <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-            Trendy Houseplants
+            Healthy Water
           </h2>
 
           <Link href="/products">
-            <button className="mt-6 px-8 py-3 text-sm font-medium uppercase tracking-wider text-white bg-[#1700de] hover:bg-[#0f00a8] transition">
-              Shop Now
-            </button>
-          </Link>
-        </div>
-      </div>
+  <button className="mt-6 px-10 py-4 text-base font-semibold text-white bg-[#123c8d] rounded-full hover:bg-[#0f2f6b] transition">
+    Buy Products
+  </button>
+</Link>
+        </div> */}
+      </div> 
 
       {/* 🔥 TWO CARDS BELOW BANNER */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">

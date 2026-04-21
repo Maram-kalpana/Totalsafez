@@ -975,14 +975,14 @@ video {
 .border-b {
   border-bottom-width: 1px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-r {
   border-right-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
-}
-.border-b-2 {
-  border-bottom-width: 2px;
 }
 .border-\[\#111\] {
   --tw-border-opacity: 1;
@@ -1102,6 +1102,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-\[\#123c8d\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 60 141 / var(--tw-bg-opacity));
+}
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -1113,6 +1117,10 @@ video {
 .object-\[35\%_center\] {
   -o-object-position: 35% center;
      object-position: 35% center;
+}
+.object-left {
+  -o-object-position: left;
+     object-position: left;
 }
 .p-0 {
   padding: 0px;
@@ -1206,8 +1214,9 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-1 {
-  padding-bottom: 0.25rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .pb-10 {
   padding-bottom: 2.5rem;
@@ -1284,6 +1293,9 @@ video {
 .text-\[15px\] {
   font-size: 15px;
 }
+.text-\[16px\] {
+  font-size: 16px;
+}
 .text-\[18px\] {
   font-size: 18px;
 }
@@ -1309,8 +1321,9 @@ video {
   font-size: 0.75rem;
   line-height: 1rem;
 }
-.text-\[16px\] {
-  font-size: 16px;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1568,6 +1581,11 @@ a {
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#0f2f6b\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 47 107 / var(--tw-bg-opacity));
 }
 
 .hover\:text-\[\#131313\]:hover {
