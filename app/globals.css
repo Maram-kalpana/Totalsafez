@@ -15,3 +15,18 @@ a {
   color: inherit;
   text-decoration: none;
 }
+/* Hide scrollbar */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Fix mobile gray scroll line */
+.no-scrollbar-shadow {
+  -webkit-overflow-scrolling: touch;
+  background: transparent;
+}

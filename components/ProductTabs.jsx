@@ -1,29 +1,32 @@
 ﻿'use client';
 
-import { productTabs } from '@/data/products';
+const TABS = [
+  { id: 'featured', label: 'Featured Products' },
+  { id: 'newest',   label: 'Newest Products'  },
+  { id: 'trending', label: 'Trending Products' },
+];
 
 export default function ProductTabs({ activeTab, onTabChange }) {
   return (
-    <section className="pt-[100px] pb-8"> {/* ✅ spacing added */}
-
-      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-center gap-6 px-4 text-[16px] font-medium uppercase tracking-[0.16em] sm:px-6 lg:px-8">
-        
-        {productTabs.map((tab) => (
-          <button
-            key={tab.key}
-            onClick={() => onTabChange(tab.key)}
-            className={`pb-2 transition-all duration-300 ${
-              activeTab === tab.key
-                ? 'border-b-2 border-[#131313] text-[#131313]'
-                : 'text-[#7a7a7a] hover:text-[#131313]'
-            }`}
-          >
-            {tab.label}
-          </button>
-        ))}
-
-      </div>
-
-    </section>
+    <div className="mt-[100px] pb-6">
+  <div className="flex items-center justify-center gap-4 sm:gap-8 px-4 sm:px-6 lg:px-8 overflow-x-auto scrollbar-none">
+    {TABS.map(({ id, label }) => (
+      <button
+        key={id}
+        onClick={() => onTabChange(id)}
+        style={{ outline: 'none', boxShadow: 'none', border: 'none' }}
+        className={`
+          relative whitespace-nowrap pb-3 pt-4 text-sm sm:text-base font-medium transition-colors bg-transparent
+          ${activeTab === id
+            ? 'text-black after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-black after:content-[""]'
+            : 'text-gray-400 hover:text-gray-600'
+          }
+        `}
+      >
+        {label}
+      </button>
+    ))}
+  </div>
+</div>
   );
 }

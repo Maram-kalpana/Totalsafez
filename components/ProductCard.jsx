@@ -8,7 +8,7 @@ export default function ProductCard({ product }) {
       <Link href={`/products/${product.id}`}>
 
         {/* CARD IMAGE AREA */}
-        <div className="relative h-[340px] flex items-center justify-center overflow-hidden">
+        <div className="relative h-[200px] sm:h-[260px] md:h-[300px] lg:h-[340px] flex items-center justify-center overflow-hidden">
 
           {/* SALE RIBBON */}
           {product.isSale && (
@@ -40,7 +40,7 @@ export default function ProductCard({ product }) {
           <img
             src={product.image}
             alt={product.name}
-            className="max-h-[260px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.06]"
+            className="max-h-[160px] sm:max-h-[200px] md:max-h-[240px] lg:max-h-[260px] w-auto object-contain transition-transform duration-300 group-hover:scale-[1.06]"
           />
 
           {/* HOVER ACTION ICONS */}
@@ -63,15 +63,15 @@ export default function ProductCard({ product }) {
 
         </div>
 
-        {/* TEXT — white bg so it contrasts against the gray card */}
+        {/* TEXT */}
         <div className="bg-white py-3 px-2">
-          <h4 className="text-[13px] font-medium text-[#222] mb-1">
+          <h4 className="text-[12px] sm:text-[13px] font-medium text-[#222] mb-1 truncate">
             {product.name}
           </h4>
           <div className="flex items-center justify-center gap-2">
-            <span className="text-[12px] text-[#555]">{product.price}</span>
+            <span className="text-[11px] sm:text-[12px] text-[#555]">{product.price}</span>
             {product.originalPrice && (
-              <span className="text-[11px] text-[#bbb] line-through">{product.originalPrice}</span>
+              <span className="text-[10px] sm:text-[11px] text-[#bbb] line-through">{product.originalPrice}</span>
             )}
           </div>
         </div>
